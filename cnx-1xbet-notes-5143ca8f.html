@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1xbet 简明指南 · 信息卡片</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f0f3f8;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      color: #facc15;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #334155;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-top: 1rem;
+      border: 1px solid #475569;
+    }
+
+    /* 正文区 */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      color: #0f172a;
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e9eef4;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .card .emoji-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    .audience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .audience-tag {
+      background: #e2e8f0;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #1e293b;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .audience-tag.highlight {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .link-section {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem 2rem 2.2rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e2e8f0;
+    }
+
+    .link-section p {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .link-section a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .link-section a:hover {
+      border-bottom-color: #2563eb;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e2e8f0;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+
+    .note-box {
+      background: #fef9e7;
+      border-left: 4px solid #eab308;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      margin: 2rem 0 1rem;
+      font-size: 0.95rem;
+      color: #4b3d0a;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      border-top: 1px solid #d1d9e6;
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .container {
+        padding: 1.8rem 1rem 3rem;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .link-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <h1>1xbet · 简明指南</h1>
+    <p class="sub">从使用情景到访问提醒，整理一份清晰的信息卡片页</p>
+    <span class="badge">📌 访问提示 · 2025</span>
+  </header>
+
+  <!-- 正文 -->
+  <div class="container">
+
+    <!-- 用途卡片 -->
+    <h2 class="section-title">📋 主要用途</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="emoji-icon">⚽</span>
+        <h3>体育赛事浏览</h3>
+        <p>覆盖足球、篮球、网球等主流赛事，提供实时比分与赛程信息。适合赛前查阅与追踪。</p>
+      </div>
+      <div class="card">
+        <span class="emoji-icon">🎲</span>
+        <h3>娱乐游戏展示</h3>
+        <p>包含虚拟体育、棋牌、电子竞技等不同类别，界面分类清晰，方便快速了解内容。</p>
+      </div>
+      <div class="card">
+        <span class="emoji-icon">📊</span>
+        <h3>数据与统计</h3>
+        <p>提供历史对阵记录、选手数据、联赛走势等辅助信息，供有分析需求的用户参考。</p>
+      </div>
+      <div class="card">
+        <span class="emoji-icon">🌐</span>
+        <h3>多语言界面</h3>
+        <p>支持多种语言切换，降低信息获取门槛，不同地区的用户都可以找到熟悉的语言。</p>
+      </div>
+    </div>
+
+    <!-- 适合人群 -->
+    <h2 class="section-title">🧑‍🤝‍🧑 适合人群</h2>
+    <div class="audience-list">
+      <span class="audience-tag">⚡ 体育爱好者</span>
+      <span class="audience-tag">🎮 电竞关注者</span>
+      <span class="audience-tag">📈 数据分析型用户</span>
+      <span class="audience-tag highlight">🧭 初次了解的新手</span>
+      <span class="audience-tag">📱 移动端使用者</span>
+    </div>
+
+    <!-- 自然链接段落 -->
+    <div class="link-section">
+      <p>
+        如果你希望通过一个集中页面了解体育、电竞或虚拟赛事信息，可以前往 
+        <a href="https://cnx-1xbet.com">1xbet</a> 
+        查看其内容分类与赛事列表。该站点以信息展示为主，栏目设置较丰富，
+        适合在需要查阅赛事动态或游戏种类时快速浏览。
+      </p>
+      <p style="margin-top: 1rem; color: #475569;">
+        建议先熟悉界面布局和导航分类，再根据个人兴趣选择对应板块。
+      </p>
+    </div>
+
+    <!-- 访问提醒 + FAQ 摘要 -->
+    <h2 class="section-title">🔐 访问提醒</h2>
+    <div class="faq-item">
+      <strong>🌐 域名与访问稳定性</strong>
+      <p>请留意网址后缀与来源，确保通过可信任渠道进入。不同地区访问体验可能存在差异。</p>
+    </div>
+    <div class="faq-item">
+      <strong>📱 设备与浏览器建议</strong>
+      <p>推荐使用最新版 Chrome、Edge 或 Safari，以获得较完整的界面显示和交互响应。</p>
+    </div>
+    <div class="faq-item">
+      <strong>🛡️ 信息安全注意</strong>
+      <p>不要向任何人透露你的账户信息。尽量使用独立密码，并定期更换。</p>
+    </div>
+
+    <!-- 提示块 -->
+    <div class="note-box">
+      💡 <strong>小贴士：</strong>首次访问时，可以先浏览帮助页面或常见问题板块，了解基本规则和功能入口，能帮助你更快上手。
+    </div>
+
+    <!-- 底部自然重复链接（句子中自然嵌入） -->
+    <div style="background: #ffffff; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; border: 1px solid #e2e8f0;">
+      <p style="font-size: 1rem;">
+        如果你对体育数据或者游戏分类感兴趣，不妨花几分钟看看 
+        <a href="https://cnx-1xbet.com" style="color: #2563eb; font-weight: 600; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s;">1xbet</a> 
+        上的内容组织方式。信息卡片式的页面结构让查找变得更直接，也适合快速对比不同赛事。
+      </p>
+    </div>
+
+    <div class="footer-note">
+      — 信息卡片页 · 仅供介绍参考 —
+    </div>
+
+  </div>
+
+</body>
+</html>
