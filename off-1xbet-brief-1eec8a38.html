@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>再次遇见 · 1xbet 一角</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f8f6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", system-ui, sans-serif;
+      line-height: 1.7;
+      color: #2c2c2c;
+      padding: 2.5rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 670px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* hero 段落 —— 简洁开场 */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e6e3de;
+      padding-bottom: 2rem;
+    }
+
+    .hero .short-line {
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: #6d6b68;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 360;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: #1f1e1b;
+      margin: 0.8rem 0 0.6rem 0;
+    }
+
+    .hero .sub-meta {
+      font-size: 0.9rem;
+      color: #989692;
+      display: block;
+      margin-top: 0.3rem;
+      font-weight: 350;
+    }
+
+    /* 承接段落 */
+    .intro-text {
+      font-size: 1rem;
+      margin-bottom: 2.8rem;
+      border-left: 3px solid #dad5ce;
+      padding-left: 1.2rem;
+      color: #3f3d39;
+    }
+
+    .intro-text p {
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-text a {
+      color: #2d2a26;
+      text-decoration: underline;
+      text-decoration-color: #c9c3ba;
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s;
+    }
+
+    .intro-text a:hover {
+      text-decoration-color: #8a8276;
+    }
+
+    /* 特点列表 窄且留白 */
+    .feature-list {
+      list-style: none;
+      margin: 2.8rem 0 3.5rem 0;
+      padding: 0;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+      align-items: flex-start;
+    }
+
+    .feature-marker {
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: #ece9e3;
+      color: #4b4843;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.35rem;
+      font-weight: 400;
+    }
+
+    .feature-text {
+      flex: 1;
+      font-size: 0.98rem;
+      color: #3b3935;
+    }
+
+    .feature-text strong {
+      font-weight: 550;
+      color: #252320;
+    }
+
+    .feature-text span {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.89rem;
+      color: #6a6660;
+    }
+
+    /* 温和的叙述 / 场景感 */
+    .scene-note {
+      background-color: #f3f1ed;
+      padding: 1.6rem 1.6rem 1.8rem 1.6rem;
+      border-radius: 2px;
+      margin-bottom: 3rem;
+    }
+
+    .scene-note p {
+      font-size: 0.97rem;
+      color: #3e3b36;
+      margin-bottom: 1rem;
+    }
+
+    .scene-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .scene-note .mild-quote {
+      font-style: normal;
+      border-left: 2px solid #beb6ab;
+      padding: 0.5rem 0 0.5rem 1rem;
+      margin: 1rem 0 0.2rem 0;
+      color: #56524b;
+    }
+
+    /* FAQ 摘要 —— 克制、简明 */
+    .faq-mini {
+      margin: 2.5rem 0 3rem 0;
+      border-top: 1px solid #e2ddd6;
+      padding-top: 2rem;
+    }
+
+    .faq-mini h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: #484540;
+      margin-bottom: 1rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-q {
+      font-weight: 470;
+      color: #2f2c27;
+      font-size: 0.96rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #5d5952;
+      padding-left: 0.85rem;
+      border-left: 1px solid #d9d3ca;
+    }
+
+    /* 温和结尾 */
+    .gentle-end {
+      margin-top: 3.2rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e5e0d8;
+      font-size: 0.95rem;
+      color: #66625b;
+    }
+
+    .gentle-end p {
+      max-width: 85%;
+    }
+
+    .gentle-end a {
+      color: #37342f;
+      text-decoration: underline;
+      text-decoration-color: #cbc3b7;
+      text-underline-offset: 2px;
+    }
+
+    .gentle-end a:hover {
+      text-decoration-color: #7f786c;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.8rem 0.8rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .intro-text {
+        padding-left: 0.9rem;
+      }
+
+      .feature-list li {
+        gap: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="short-line">一些事情值得再打开一次</div>
+      <h1>再次回到这里<br>不是巧合</h1>
+      <span class="sub-meta">记一笔，留一个念想</span>
+    </div>
+
+    <div class="intro-text">
+      <p>
+        有些页面你只会经过一次，而有些你会收藏、会记在某个笔记里，甚至会在几周后重新输入同样的网址。
+        <a href="https://off-1xbet.com">1xbet</a> 对我来说就属于后者——不是因为习惯，而是因为每次回来，界面依然干净，加载依旧稳定，
+        而且那种熟悉的布局让人不需要重新适应。
+      </p>
+      <p>
+        我说的不是新鲜感，而是一种<em>可靠的熟悉</em>。你清楚每个区块大概在什么位置；你知道刷新之后配色不会变味；
+        你也明白它不会突然弹出一堆让你皱眉的东西。对于一个经常需要快速完成操作的人来说，这比花哨重要得多。
+      </p>
+    </div>
+
+    <ul class="feature-list">
+      <li>
+        <span class="feature-marker">→</span>
+        <div class="feature-text">
+          <strong>一致的浏览节奏</strong>
+          <span>没有多余的跳转，不打断你的阅读流。页面元素的位置和响应速度保持稳定。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feature-marker">→</span>
+        <div class="feature-text">
+          <strong>不泛滥的信息密度</strong>
+          <span>文字、留白、色块之间有呼吸感。不会为了填充版面而堆砌区块。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feature-marker">→</span>
+        <div class="feature-text">
+          <strong>克制但可辨识的视觉语言</strong>
+          <span>深色字、浅灰底、低调的边界线。一切为可读性服务，而不是为了炫耀。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feature-marker">→</span>
+        <div class="feature-text">
+          <strong>不催促的体验</strong>
+          <span>没有任何元素让你觉得“必须现在做决定”。收藏它，隔几天再回来，什么都不耽误。</span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="scene-note">
+      <p>
+        有一天晚上我打开浏览器收藏夹，翻到一个叫“1xbet”的条目，点了下去。页面加载的那几秒里，
+        我在想自己是什么时候存的——大概是某次想快速比较几个选项，顺手就 bookmark 了。
+        再打开时，发现界面跟我记忆里几乎一样。那种感觉就像走进一间很久没去的茶馆，老板换了一批茶具，
+        但茶的味道、壶的温感、甚至背景音乐的音量都没有变。
+      </p>
+      <div class="mild-quote">
+        “有时候持续感比创新更让人安心。”
+      </div>
+      <p style="margin-top: 0.8rem;">
+        当然，这只是一个个人化的角度。但如果你也在寻找一个不需要反复学习、不会随着更新而面目全非的地方，
+        或许可以试试把它存起来。收藏不费什么力气，而再次访问只需要一次点击。
+      </p>
+    </div>
+
+    <div class="faq-mini">
+      <h2>几个简短的回答</h2>
+      <div class="faq-item">
+        <div class="faq-q">为什么需要再次访问？</div>
+        <div class="faq-a">没有人规定网站只能去一次。把顺手且可靠的入口放在收藏夹，省去搜索和记忆的麻烦。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">内容会经常变动吗？</div>
+        <div class="faq-a">就我观察，结构和核心信息保持得很稳定。偶尔会有小的布局调整，但不影响整体使用习惯。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">适合用什么心态打开？</div>
+        <div class="faq-a">平常心。不需要预约，不需要准备，就像翻一本经常放在桌上的书。</div>
+      </div>
+    </div>
+
+    <div class="gentle-end">
+      <p>
+        如果说有什么值得带走的，那就是：如果你觉得某个地方顺手，不妨多来几次。<a href="https://off-1xbet.com">1xbet</a> 也是这样的存在。
+        不必急着下结论，让时间帮你验证它是否值得留在收藏栏里。
+      </p>
+      <p style="margin-top: 1.2rem; font-size: 0.85rem; color: #82807a;">
+        以上只是个人感受，不构成建议。请根据你自己的判断做决定。
+      </p>
+    </div>
+  </div>
+</body>
+</html>
